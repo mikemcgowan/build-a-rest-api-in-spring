@@ -66,9 +66,9 @@ public class DatabaseLoader implements ApplicationRunner {
     );
     users.saveAll(students);
     users.save(new User(
+      "mike.mcgowan",
       "Mike",
       "McGowan",
-      "mike.mcgowan",
       "Wibble123!",
       new String[] {"ROLE_USER", "ROLE_ADMIN"}
     ));

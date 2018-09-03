@@ -12,9 +12,9 @@ public class User extends BaseEntity {
 
   public static final PasswordEncoder PASSWORD_ENCODER = new BCryptPasswordEncoder();
 
+  private String username;
   private String firstName;
   private String lastName;
-  private String username;
 
   @JsonIgnore
   private String password;
@@ -26,11 +26,11 @@ public class User extends BaseEntity {
     super();
   }
 
-  public User(String firstName, String lastName, String userName, String password, String[] roles) {
+  public User(String username, String firstName, String lastName, String password, String[] roles) {
     this();
+    this.username = username;
     this.firstName = firstName;
     this.lastName = lastName;
-    this.username = userName;
     setPassword(password);
     this.roles = roles;
   }
