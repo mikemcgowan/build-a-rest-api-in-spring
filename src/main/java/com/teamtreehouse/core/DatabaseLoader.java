@@ -41,7 +41,8 @@ public class DatabaseLoader implements ApplicationRunner {
       "Scala",
       "Groovy",
       "Hibernate",
-      "Spring REST Data"
+      "Spring REST Data",
+      "Spring HATEOAS",
     };
     List<Course> cs = new ArrayList<>();
     IntStream.range(0, 100)
