@@ -6,8 +6,10 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import javax.persistence.Entity;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "usr")
 public class User extends BaseEntity {
 
   public static final PasswordEncoder PASSWORD_ENCODER = new BCryptPasswordEncoder();
